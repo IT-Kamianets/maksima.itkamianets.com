@@ -8,54 +8,59 @@
   },
   "hero": {
     "title": "Hotel MAXIMA",
-    "subtitle": "Comfort and hospitality in the heart of Kamianets-Podilskyi"
+    "subtitle": "MAXIMA-lly convenient – just like home! Rest in Kamianets-Podilskyi"
+  },
+  "about": {
+    "title": "About Our Hotel",
+    "content": "Hotel complex 'Maxima' is a cozy, private family-type hotel. We are located just 500 meters from the unique 'Running Fawn' bridge. Our hotel accommodates up to 20 guests, allowing us to provide personalized service to everyone. It's your home and a shelter for your car, your office when needed, and a place for true relaxation."
   },
   "important": {
     "title": "Important Information",
     "beds_title": "Extra Beds",
-    "beds_desc": "Contact the hotel for more information about the possibility of adding beds and cribs.",
-    "prepayment_title": "Prepayment & Conditions",
-    "prepayment_desc": "Management will contact you regarding prepayment, which must be made within 5 days. AC usage incurs an additional fee."
+    "beds_desc": "We can provide extra beds or cribs. Please contact management for details.",
+    "prepayment_title": "Conditions",
+    "prepayment_desc": "Management will contact you regarding prepayment (due within 5 days). AC usage may incur an additional fee."
   },
   "services": {
     "title": "Our Services & Amenities",
     "business": "Business Services (meetings, banquets)",
-    "food": "Dining & BBQ Facilities",
-    "in_room": "In Rooms: Heating, Fireplace, TV, Hairdryer",
-    "reception": "24/7 Desk, Luggage storage, Room service",
-    "wifi": "Free high-speed Wi-Fi",
-    "parking": "Secure Parking on-site"
+    "food": "Breakfast included, custom dinner on request",
+    "in_room": "In Rooms: TV, Hairdryer, Kettle, Wi-Fi",
+    "reception": "24/7 Desk, On-site grocery shop",
+    "wifi": "Free high-speed Wi-Fi throughout",
+    "parking": "Secure parking for your car"
   },
   "rooms": {
     "title": "Our Rooms",
-    "select": "Select Room",
+    "select": "Book Now",
     "per_night": "per night",
-    "taxes": "+70 UAH taxes & fees",
-    "capacity": "Capacity: 2 persons",
+    "taxes": "+70 UAH taxes",
+    "capacity": "Capacity: ",
     "standard": {
       "name": "Standard Double Room",
       "beds": "1 large double bed",
-      "features": "Garden/Courtyard view, TV, kettle, hairdryer, mosquito net"
+      "features": "TV, kettle, hairdryer, mosquito net, courtyard view"
     },
     "comfort": {
       "name": "Comfort Double Room",
       "beds": "1 large double or 2 single beds",
-      "features": "18 sq. m, city view, mini-bar, Wi-Fi"
+      "features": "18 sq. m, city view, Wi-Fi, TV"
     },
     "junior_suite": {
       "name": "Junior Suite",
       "beds": "1 large double bed",
-      "features": "32 sq. m, balcony, terrace, AC, mini-bar"
+      "features": "32 sq. m, balcony, terrace, AC, TV"
     },
     "comfort_junior": {
       "name": "Comfort Junior Suite",
-      "beds": "2 single beds and 1 sofa bed",
-      "features": "42 sq. m, city view, AC, mini-bar"
+      "beds": "2 single beds and a sofa (up to 5 people)",
+      "features": "40 sq. m, AC, refrigerator, TV, 3 armchairs"
     },
     "book_now": "Book on Booking.com"
   },
   "footer": {
-    "address": "41b Hrushevskoho Avenue, Kamianets-Podilskyi, Ukraine",
+    "address": "41b Hrushevskoho Ave, Kamianets-Podilskyi (500m from 'Running Fawn' bridge)",
+    "phones": "+38-096-918-77-66, +38-03849-50252",
     "copyright": "© 2026 All rights reserved.",
     "designed_by": "Designed by Anatoliy"
   }
