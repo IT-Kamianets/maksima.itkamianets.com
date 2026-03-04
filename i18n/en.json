@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "rooms": "Rooms",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hotel MAXIMA",
+    "subtitle": "MAXIMA-lly convenient – just like home! Rest in Kamianets-Podilskyi"
+  },
+  "about": {
+    "title": "About Our Hotel",
+    "content": "Hotel complex 'Maxima' is a cozy, private family-type hotel. We are located just 500 meters from the unique 'Running Fawn' bridge. Our hotel accommodates up to 20 guests, allowing us to provide personalized service to everyone. It's your home and a shelter for your car, your office when needed, and a place for true relaxation."
+  },
+  "important": {
+    "title": "Important Information",
+    "beds_title": "Extra Beds",
+    "beds_desc": "We can provide extra beds or cribs. Please contact management for details.",
+    "prepayment_title": "Conditions",
+    "prepayment_desc": "Management will contact you regarding prepayment (due within 5 days). AC usage may incur an additional fee."
+  },
+  "services": {
+    "title": "Our Services & Amenities",
+    "business": "Business Services (meetings, banquets)",
+    "food": "Breakfast included, custom dinner on request",
+    "in_room": "In Rooms: TV, Hairdryer, Kettle, Wi-Fi",
+    "reception": "24/7 Desk, On-site grocery shop",
+    "wifi": "Free high-speed Wi-Fi throughout",
+    "parking": "Secure parking for your car"
+  },
+  "rooms": {
+    "title": "Our Rooms",
+    "select": "Book Now",
+    "per_night": "per night",
+    "taxes": "+70 UAH taxes",
+    "capacity": "Capacity: ",
+    "standard": {
+      "name": "Standard Double Room",
+      "beds": "1 large double bed",
+      "features": "TV, kettle, hairdryer, mosquito net, courtyard view"
+    },
+    "comfort": {
+      "name": "Comfort Double Room",
+      "beds": "1 large double or 2 single beds",
+      "features": "18 sq. m, city view, Wi-Fi, TV"
+    },
+    "junior_suite": {
+      "name": "Junior Suite",
+      "beds": "1 large double bed",
+      "features": "32 sq. m, balcony, terrace, AC, TV"
+    },
+    "comfort_junior": {
+      "name": "Comfort Junior Suite",
+      "beds": "2 single beds and a sofa (up to 5 people)",
+      "features": "40 sq. m, AC, refrigerator, TV, 3 armchairs"
+    },
+    "book_now": "Book on Booking.com"
+  },
+  "footer": {
+    "address": "41b Hrushevskoho Ave, Kamianets-Podilskyi (500m from 'Running Fawn' bridge)",
+    "phones": "+38-096-918-77-66, +38-03849-50252, +38-099-448-51-10",
+    "copyright": "© 2026 All rights reserved.",
+    "designed_by": "Designed by Anatoliy"
+  }
+}
