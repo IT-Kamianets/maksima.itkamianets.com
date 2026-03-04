@@ -1,39 +1,52 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
+    push:
+        branches:
+            - master
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    deploy:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
 
-      - name: Install dependencies
-        run: npm install
+            - name: Install dependencies
+              run: npm i --include=optional
 
-      - name: Build
-        run: npx ng build --configuration production --base-href /
+            - name: Build Angular app
+              run: npm run build
 
-      - name: Copy index.html to 404.html
-        run: cp dist/maksima-it-kamianets/browser/index.html dist/maksima-it-kamianets/browser/404.html
+            - name: Set up SSH
+              env:
+                  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+              run: |
+                  mkdir -p ~/.ssh
+                  echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+                  chmod 600 ~/.ssh/id_rsa
+                  ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/maksima-it-kamianets/browser
-          cname: maksima.itkamianets.com
+            - name: Commit and push to gh-pages using SSH
+              env:
+                  GIT_SSH_COMMAND: 'ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no'
+              run: |
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  cd dist/maksima-it-kamianets/browser
+                  git init
+                  git add --all .
+                  git commit -m "Deploy to GitHub Pages"
+                  git checkout -B gh-pages
+                  git push git@github.com:${{ github.repository }} gh-pages --force
+
+            - name: Clean up SSH
+              run: |
+                  rm -f ~/.ssh/id_rsa
+                  rm -f ~/.ssh/known_hosts
