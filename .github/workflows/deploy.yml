@@ -6,30 +6,34 @@ on:
       - master
       - main
 
-permissions:
-  contents: write
-
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node ⚙️
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
           cache: 'npm'
 
-      - name: Install and Build 🔧
-        run: |
-          npm install
-          npx ng build --configuration production --base-href /
+      - name: Install dependencies
+        run: npm install
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Build
+        run: npx ng build --configuration production --base-href /
+
+      - name: Copy index.html to 404.html
+        run: cp dist/maksima-it-kamianets/browser/index.html dist/maksima-it-kamianets/browser/404.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          folder: dist/maksima-it-kamianets/browser
-          branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/maksima-it-kamianets/browser
+          cname: maksima.itkamianets.com
