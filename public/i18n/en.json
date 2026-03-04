@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "rooms": "Rooms",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hotel MAXIMA",
+    "subtitle": "Comfort and hospitality in the heart of Kamianets-Podilskyi"
+  },
+  "important": {
+    "title": "Important Information",
+    "beds_title": "Extra Beds",
+    "beds_desc": "Contact the hotel for more information about the possibility of adding beds and cribs.",
+    "prepayment_title": "Prepayment & Conditions",
+    "prepayment_desc": "Management will contact you regarding prepayment, which must be made within 5 days. AC usage incurs an additional fee."
+  },
+  "services": {
+    "title": "Our Services & Amenities",
+    "business": "Business Services (meetings, banquets)",
+    "food": "Dining & BBQ Facilities",
+    "in_room": "In Rooms: Heating, Fireplace, TV, Hairdryer",
+    "reception": "24/7 Desk, Luggage storage, Room service",
+    "wifi": "Free high-speed Wi-Fi",
+    "parking": "Secure Parking on-site"
+  },
+  "rooms": {
+    "title": "Our Rooms",
+    "select": "Select Room",
+    "per_night": "per night",
+    "taxes": "+70 UAH taxes & fees",
+    "capacity": "Capacity: 2 persons",
+    "standard": {
+      "name": "Standard Double Room",
+      "beds": "1 large double bed",
+      "features": "Garden/Courtyard view, TV, kettle, hairdryer, mosquito net"
+    },
+    "comfort": {
+      "name": "Comfort Double Room",
+      "beds": "1 large double or 2 single beds",
+      "features": "18 sq. m, city view, mini-bar, Wi-Fi"
+    },
+    "junior_suite": {
+      "name": "Junior Suite",
+      "beds": "1 large double bed",
+      "features": "32 sq. m, balcony, terrace, AC, mini-bar"
+    },
+    "comfort_junior": {
+      "name": "Comfort Junior Suite",
+      "beds": "2 single beds and 1 sofa bed",
+      "features": "42 sq. m, city view, AC, mini-bar"
+    },
+    "book_now": "Book on Booking.com"
+  },
+  "footer": {
+    "address": "41b Hrushevskoho Avenue, Kamianets-Podilskyi, Ukraine",
+    "copyright": "© 2026 All rights reserved.",
+    "designed_by": "Designed by Anatoliy"
+  }
+}

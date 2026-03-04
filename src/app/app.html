@@ -1,0 +1,278 @@
+<!-- Desktop Navigation -->
+<nav class="navbar is-fixed-top is-transparent is-hidden-mobile" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#home">
+        <strong class="is-size-4 has-text-white">MAXIMA</strong>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item has-text-white" href="#home">{{ t('nav.home') }}</a>
+        <a class="navbar-item has-text-white" href="#about">{{ t('nav.about') }}</a>
+        <a class="navbar-item has-text-white" href="#services">{{ t('nav.services') }}</a>
+        <a class="navbar-item has-text-white" href="#rooms">{{ t('nav.rooms') }}</a>
+        <a class="navbar-item has-text-white" href="#contact">{{ t('nav.contact') }}</a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <button class="button is-small is-dark" [class.is-primary]="currentLang === 'uk'" (click)="setLang('uk')">UA</button>
+            <button class="button is-small is-dark" [class.is-primary]="currentLang === 'en'" (click)="setLang('en')">EN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Bottom Navigation -->
+<div class="mobile-nav is-hidden-tablet">
+  <a href="#home" class="nav-item">
+    <i class="fa fa-home"></i>
+    <span>{{ t('nav.home') }}</span>
+  </a>
+  <a href="#about" class="nav-item">
+    <i class="fa fa-info-circle"></i>
+    <span>{{ t('nav.about') }}</span>
+  </a>
+  <a href="#rooms" class="nav-item">
+    <i class="fa fa-bed"></i>
+    <span>{{ t('nav.rooms') }}</span>
+  </a>
+  <a (click)="setLang(currentLang === 'uk' ? 'en' : 'uk')" class="nav-item">
+    <i class="fa fa-globe"></i>
+    <span>{{ currentLang === 'uk' ? 'EN' : 'UA' }}</span>
+  </a>
+</div>
+
+<!-- Main Content -->
+<main id="home" class="has-background-black">
+  <!-- Hero -->
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered fade-in">
+        <h1 class="title is-1 has-text-white">
+          {{ t('hero.title') }}
+        </h1>
+        <h2 class="subtitle is-3 has-text-white">
+          {{ t('hero.subtitle') }}
+        </h2>
+        <a href="https://www.booking.com/hotel/ua/maxima.uk.html?aid=2428387" target="_blank" class="button is-primary is-large is-rounded">
+          {{ t('rooms.book_now') }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Important -->
+  <section id="about" class="section has-background-black has-text-white">
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-6">
+          <h2 class="title has-text-white">{{ t('about.title') }}</h2>
+          <div class="content is-size-5 has-text-light">
+            <p>{{ t('about.content') }}</p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="notification is-dark has-text-white shadow border-light">
+            <h3 class="title is-4 has-text-white">{{ t('important.title') }}</h3>
+            <p class="mb-3"><strong class="has-text-primary">{{ t('important.beds_title') }}:</strong> {{ t('important.beds_desc') }}</p>
+            <p><strong>{{ t('important.prepayment_title') }}:</strong> {{ t('important.prepayment_desc') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section has-background-black has-text-white">
+    <div class="container">
+      <h2 class="title has-text-centered has-text-white">{{ t('services.title') }}</h2>
+      <div class="columns is-multiline">
+        <div class="column is-4">
+          <div class="card p-5 has-text-centered has-background-dark has-text-white border-light h-100">
+            <i class="fa fa-briefcase fa-3x mb-3 has-text-primary"></i>
+            <p>{{ t('services.business') }}</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card p-5 has-text-centered has-background-dark has-text-white border-light h-100">
+            <i class="fa fa-cutlery fa-3x mb-3 has-text-primary"></i>
+            <p>{{ t('services.food') }}</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card p-5 has-text-centered has-background-dark has-text-white border-light h-100">
+            <i class="fa fa-television fa-3x mb-3 has-text-primary"></i>
+            <p>{{ t('services.in_room') }}</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card p-5 has-text-centered has-background-dark has-text-white border-light h-100">
+            <i class="fa fa-clock-o fa-3x mb-3 has-text-primary"></i>
+            <p>{{ t('services.reception') }}</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card p-5 has-text-centered has-background-dark has-text-white border-light h-100">
+            <i class="fa fa-wifi fa-3x mb-3 has-text-primary"></i>
+            <p>{{ t('services.wifi') }}</p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card p-5 has-text-centered has-background-dark has-text-white border-light h-100">
+            <i class="fa fa-car fa-3x mb-3 has-text-primary"></i>
+            <p>{{ t('services.parking') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms -->
+  <section id="rooms" class="section has-background-black">
+    <div class="container">
+      <h2 class="title has-text-centered has-text-white">{{ t('rooms.title') }}</h2>
+      <div class="columns is-multiline">
+        <!-- Room 1 -->
+        <div class="column is-6">
+          <div class="card h-100 has-background-dark has-text-white border-light">
+            <div class="card-image">
+              <figure class="image is-16by9">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max500/12441686.jpg?k=8affd222e49d0c6bc8afc9dd93c1c01e345d53425e866dfb17c9620e630f8cb1&o=" alt="Standard Room">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-4 has-text-white">{{ t('rooms.standard.name') }}</p>
+              <div class="content">
+                <p><i class="fa fa-bed"></i> {{ t('rooms.standard.beds') }}</p>
+                <p><i class="fa fa-info-circle"></i> {{ t('rooms.standard.features') }}</p>
+                <div class="level mt-4">
+                  <div class="level-left">
+                    <span class="title is-4 has-text-white">850 UAH</span>
+                  </div>
+                  <div class="level-right">
+                    <a href="https://www.booking.com/hotel/ua/maxima.uk.html?aid=2428387" target="_blank" class="button is-primary">
+                      {{ t('rooms.select') }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Room 2 -->
+        <div class="column is-6">
+          <div class="card h-100 has-background-dark has-text-white border-light">
+            <div class="card-image">
+              <figure class="image is-16by9">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/176225890.jpg?k=1d946b248aaa1bce04fe9e659d4be47a01231a40dda2194a1e323acca6d5218e&o=" alt="Comfort Room">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-4 has-text-white">{{ t('rooms.comfort.name') }}</p>
+              <div class="content">
+                <p><i class="fa fa-bed"></i> {{ t('rooms.comfort.beds') }}</p>
+                <p><i class="fa fa-info-circle"></i> {{ t('rooms.comfort.features') }}</p>
+                <div class="level mt-4">
+                  <div class="level-left">
+                    <span class="title is-4 has-text-white">900 UAH</span>
+                  </div>
+                  <div class="level-right">
+                    <a href="https://www.booking.com/hotel/ua/maxima.uk.html?aid=2428387" target="_blank" class="button is-primary">
+                      {{ t('rooms.select') }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Room 3 -->
+        <div class="column is-6">
+          <div class="card h-100 has-background-dark has-text-white border-light">
+            <div class="card-image">
+              <figure class="image is-16by9">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max500/176225862.jpg?k=fef05cc0403500c2d5e04a972d4fee43067379c0a75abaf69b83d14f2bc8a65a&o=" alt="Junior Suite">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-4 has-text-white">{{ t('rooms.junior_suite.name') }}</p>
+              <div class="content">
+                <p><i class="fa fa-bed"></i> {{ t('rooms.junior_suite.beds') }}</p>
+                <p><i class="fa fa-info-circle"></i> {{ t('rooms.junior_suite.features') }}</p>
+                <div class="level mt-4">
+                  <div class="level-left">
+                    <span class="title is-4 has-text-white">1 100 UAH</span>
+                  </div>
+                  <div class="level-right">
+                    <a href="https://www.booking.com/hotel/ua/maxima.uk.html?aid=2428387" target="_blank" class="button is-primary">
+                      {{ t('rooms.select') }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Room 4 -->
+        <div class="column is-6">
+          <div class="card h-100 has-background-dark has-text-white border-light">
+            <div class="card-image">
+              <figure class="image is-16by9">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max500/176225862.jpg?k=fef05cc0403500c2d5e04a972d4fee43067379c0a75abaf69b83d14f2bc8a65a&o=" alt="Comfort Junior Suite">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-4 has-text-white">{{ t('rooms.comfort_junior.name') }}</p>
+              <div class="content">
+                <p><i class="fa fa-bed"></i> {{ t('rooms.comfort_junior.beds') }}</p>
+                <p><i class="fa fa-info-circle"></i> {{ t('rooms.comfort_junior.features') }}</p>
+                <div class="level mt-4">
+                  <div class="level-left">
+                    <span class="title is-4 has-text-white">1 100 UAH</span>
+                  </div>
+                  <div class="level-right">
+                    <a href="https://www.booking.com/hotel/ua/maxima.uk.html?aid=2428387" target="_blank" class="button is-primary">
+                      {{ t('rooms.select') }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer has-background-black has-text-white p-6 border-top-light">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-6">
+          <h3 class="title is-4 font-weight-bold has-text-white">MAXIMA</h3>
+          <p>{{ t('footer.address') }}</p>
+          <p class="mt-4">{{ t('footer.copyright') }}</p>
+        </div>
+        <div class="column is-6">
+          <div class="map-container shadow">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.117462054619!2d26.58281131566!3d48.66555367926955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4733b87d3a26b41f%3A0xc37d533dc0ed6f8d!2sMaxima!5e0!3m2!1sen!2sua!4v1709550000000!5m2!1sen!2sua" 
+              width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="has-text-centered mt-6 is-flex is-justify-content-center is-align-items-center">
+        <a href="https://github.com/IT-Kamianets/maksima.itkamianets.com" target="_blank" class="has-text-white is-flex is-align-items-center">
+          <i class="fa fa-github fa-2x mr-3"></i>
+          <span class="is-size-5">Designed by Anatoliy</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</main>
